@@ -16,7 +16,13 @@ function App() {
     </div>
     <div className='texts'>
     <h2>Residen Evil Nich</h2>
-    <p>Resident Evil adalah game buatan capcom, yang menjadi game yang banyak dimainkan.</p>
+    <p className='info'>
+    <a className='author'>
+    Penulis
+    </a>
+    <time>2023-02-13 8:32</time>
+    </p>
+    <p className='summary'>Resident Evil adalah game buatan capcom, yang menjadi game yang banyak dimainkan.</p>
     </div>
     </div>
     </main>
