@@ -1,16 +1,13 @@
 import './App.css';
 import Post from './componen/Post';
+import Nav from './componen/Nav';
 
 function App() {
   return (
     <main>
-    <header>
-    <a href='' className='logo'>Blog Saya</a>
-    <nav>
-    <a href=''>Login</a>
-    <a href=''>Register</a>
-    </nav>
-    </header>
+    <Nav />
+    <Post />
+    <Post />
     <Post />
     </main>
   );
