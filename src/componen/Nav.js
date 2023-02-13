@@ -7,7 +7,7 @@ function Nav() {
     <Link to={'/'} className='logo'>Blog Saya</Link>
     <nav>
     <Link to={'/login'}>Login</Link>
-    <Link to={''}>Register</Link>
+    <Link to={'/daftar'}>Daftar</Link>
     </nav>
     </header>
   )
