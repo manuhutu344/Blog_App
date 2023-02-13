@@ -3,7 +3,8 @@ import React from 'react'
 function Login() {
   return (
     <div>
-    <form action=''>
+    <form className='login'>
+    <h1>Login</h1>
     <input type='text' placeholder='Masukan Username Anda' />
     <input type='password' placeholder='Masukan Password Andas' />
     <button>Login</button>
