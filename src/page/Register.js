@@ -3,7 +3,8 @@ import React from 'react'
 function Register() {
   return (
     <div>
-    <form action=''>
+    <form className='register'>
+    <h1>Daftar</h1>
     <input type='text' placeholder='Masukan Username Anda' />
     <input type='password' placeholder='Masukan Password Andas' />
     <button>Daftar</button>
