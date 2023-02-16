@@ -1,7 +1,8 @@
 const router = require('express').Router()
 
 router.post('/register', async(req, res)=>{
-    res.json('Berhasil Daftar')
+    const {username, password} = req.body
+    res.json({requestData:{username, password}})
 })
 
 module.exports = router
