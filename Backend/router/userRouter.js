@@ -16,4 +16,12 @@ router.post('/register', async(req, res)=>{
         res.status(400).json(error)
     }
 })
+
+router.post('/login', async(req, res)=>{
+    const {username, password} = req.body
+    const userDoc = await User.findOne({username})
+   const ok = bcrypt.compareSync(password, userDoc.password)
+   res.json(ok)
+})
+
 module.exports = router
