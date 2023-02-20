@@ -5,7 +5,7 @@ require('dotenv').config()
 require('./connection')
 const cors = require('cors')
 
-app.use(cors())
+app.use(cors({credentials:true, origin:'http://localhost:3006'}))
 app.use(express.json())
 app.use('/user', userRouter)
 
