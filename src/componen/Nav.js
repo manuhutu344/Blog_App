@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from 'react'
-import { json, Link } from 'react-router-dom'
+import React, { useContext, useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+import { UserContext } from './UserContext'
 
 function Nav() {
-  const [username, setUsername] = useState(null)
+  const {setUserInfo, userInfo} = useContext(UserContext)
   useEffect(()=>{
     fetch('http://localhost:9001/user/profile', {
       credentials: 'include',
     }).then(response =>{
       response.json().then(userInfo =>{
-        setUsername(userInfo.username)
+        setUserInfo(userInfo)
       })
     })
   },[])
@@ -18,7 +19,10 @@ function Nav() {
       credentials: 'include',
       method:'POST',
     })
+    setUserInfo(null)
   }
+
+  const username = userInfo?.username
 
   return (
     <header>
