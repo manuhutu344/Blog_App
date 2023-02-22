@@ -4,9 +4,11 @@ import Layout from './componen/Layout';
 import Home from './page/Home';
 import Login from './page/Login';
 import Register from './page/Register';
+import { UserContextProvider } from './componen/UserContext';
 
 function App() {
   return (
+    <UserContextProvider>
     <Routes>
     <Route path='/' element={<Layout />}>
     <Route index element={<Home />} />
@@ -14,6 +16,7 @@ function App() {
     <Route path={'/daftar'} element={<Register />} />
     </Route> 
     </Routes>
+    </UserContextProvider>
   );
 }
 
