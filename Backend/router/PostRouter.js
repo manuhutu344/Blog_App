@@ -7,6 +7,7 @@ const jwt = require('jsonwebtoken')
 const secret = 'qwertyuiopasdfghjklzxcvbnm1234567890'
 
 
+
 router.post('/post', uploadMiddleware.single('file'), async(req, res)=>{
     const {originalname, path} = req.file
     const parts = originalname.split('.')

@@ -5,7 +5,7 @@ function Post({title, summary, cover, content, createdAt, author}) {
   return (
     <div className='post'>
     <div className='image'>
-    <img src='https://cdn.gamebrott.com/wp-content/uploads/2023/02/Gameplay-Resident-Evil-4-Remake-Header.jpg' alt='' />
+    <img src={'http://localhost:9001/'+cover} alt='' />
     </div>
     <div className='texts'>
     <h2>{title}</h2>
