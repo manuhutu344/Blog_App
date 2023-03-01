@@ -29,7 +29,11 @@ router.post('/post', uploadMiddleware.single('file'), async(req, res)=>{
 })
 
 router.get('/lihat', async(req, res)=>{
-    res.json(await Post.find().populate('author', ['username']))
+    res.json(await Post.find()
+    .populate('author', ['username'])
+    .sort({createdAt:-1})
+    .limit(20)
+    )
 })
 
 module.exports = router
