@@ -4,7 +4,7 @@
 
 main{
     padding: 10px;
-    max-width: 700px;
+    max-width: 960px;
     margin: 0 auto;
 }
 
@@ -42,7 +42,7 @@ div.post{
     margin-bottom: 30px;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 700px){
     div.post{
         grid-template-columns: .9fr 1.1fr;
     }
@@ -118,6 +118,7 @@ div.post-page div.image{
 div.post-page div.image img{
     object-fit: cover;
     object-position: center center;
+    width: 100%;
 }
 
 div.post-page a{
@@ -142,4 +143,8 @@ div.post-page div.author{
     margin-bottom: 20px;
     font-size: .7rem;
     font-weight: bold;
+}
+
+div.post-page div.content p{
+    line-height: 1.6rem;
 }

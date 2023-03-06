@@ -21,7 +21,7 @@ function Post() {
     <div className='image'>
     <img src={`http://localhost:9001/${postInfo.cover}`} alt='' />
     </div>
-    <div dangerouslySetInnerHTML={{__html:postInfo.content}} />
+    <div className='content' dangerouslySetInnerHTML={{__html:postInfo.content}} />
     </div>
   )
 }
