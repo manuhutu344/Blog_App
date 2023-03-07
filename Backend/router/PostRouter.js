@@ -29,6 +29,16 @@ router.post('/post', uploadMiddleware.single('file'), async(req, res)=>{
     })
 })
 
+router.put('/update',uploadMiddleware.single('file'), async (req,res) => {
+    if(req.file){
+    const {originalname, path} = req.file
+    const parts = originalname.split('.')
+    const ext = parts[parts.length - 1]
+    const newPath = path+'.'+ext
+    fs.renameSync(path, newPath)
+    }
+  })
+
 router.get('/lihat', async(req, res)=>{
     res.json(await Post.find()
     .populate('author', ['username'])
