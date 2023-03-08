@@ -26,7 +26,15 @@ function Nav() {
 
   return (
     <header>
-    <Link to={'/'} className='logo'>Blog Saya</Link>
+    {!username && (
+      <Link to={'/'} className='logo'>Blog Ajah</Link>
+    )}
+    {username && (
+      <>
+      <span>Selamat Datang, {username}</span>
+      </>
+    )}
+    
     <nav>
     {username && (
       <>
